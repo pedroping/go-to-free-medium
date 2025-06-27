@@ -1,0 +1,36 @@
+{
+  "name": "Go to Free Medium",
+  "version": "1.0.0",
+  "description": "Go to Free Medium.",
+  "manifest_version": 3,
+  "author": "PedroPing",
+  "action": {
+    "default_popup": "content/index.html",
+    "default_title": "Go to Free Medium",
+    "default_icon": {
+      "16": "assets/goToFreeMedium.png",
+      "24": "assets/goToFreeMedium.png",
+      "32": "assets/goToFreeMedium.png"
+    }
+  },
+  "icons": {
+    "16": "assets/goToFreeMedium.png",
+    "32": "assets/goToFreeMedium.png",
+    "48": "assets/goToFreeMedium.png",
+    "128": "assets/goToFreeMedium.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "contextMenus"],
+  "content_scripts": [
+    {
+      "js": ["scripts/contentScript.js"],
+      "matches": ["https://medium.com/*", "https://freedium.cfd/*"]
+    }
+  ],
+  "host_permissions": ["https://medium.com/*", "https://freedium.cfd/*"],
+  "externally_connectable": {
+    "matches": ["https://medium.com/*", "https://freedium.cfd/*"]
+  }
+}
