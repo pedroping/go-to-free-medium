@@ -5,13 +5,7 @@
   "manifest_version": 3,
   "author": "PedroPing",
   "action": {
-    "default_popup": "content/index.html",
-    "default_title": "Go to Free Medium",
-    "default_icon": {
-      "16": "assets/goToFreeMedium.png",
-      "24": "assets/goToFreeMedium.png",
-      "32": "assets/goToFreeMedium.png"
-    }
+    "default_title": "Go to Free Medium"
   },
   "icons": {
     "16": "assets/goToFreeMedium.png",
@@ -22,15 +16,15 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "activeTab", "contextMenus"],
+  "permissions": ["storage", "activeTab", "contextMenus", "notifications"],
   "content_scripts": [
     {
       "js": ["scripts/contentScript.js"],
-      "matches": ["https://medium.com/*", "https://freedium.cfd/*"]
+      "matches": ["https://medium.com/*"]
     }
   ],
-  "host_permissions": ["https://medium.com/*", "https://freedium.cfd/*"],
+  "host_permissions": ["https://medium.com/*"],
   "externally_connectable": {
-    "matches": ["https://medium.com/*", "https://freedium.cfd/*"]
+    "matches": ["https://medium.com/*"]
   }
 }
