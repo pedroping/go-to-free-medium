@@ -1,6 +1,11 @@
-# 📰 Medium Freewall Extension
+# <h1 align="center">Medium Freewall Extension</h1>
 
-**Easily read Medium articles without hassle.**
+<p align="center">
+  <img src="/assets/goToFreeMedium.png" title="Extension logo" width="120px" height="120px"/>
+  <br>
+  <small>If you’re faced with a paywall message while trying to read a great article, and you don’t want to bother copying and pasting the link into a freewall page, this extension is the solution for you. With just one click on the context menu or the extension icon, you can read without any issues.</small>
+  <br>
+</p>
 
 ## ✨ What It Does
 
@@ -22,11 +27,7 @@ No more interruptions—just smooth reading.
 
 ## 🛠️ Installation
 
-1. Download or clone this repository.  
-2. Go to `chrome://extensions/` in your browser.  
-3. Enable **Developer mode**.  
-4. Click **Load unpacked**.  
-5. Select this extension’s folder.
+** Current revision status in the Chrome Developer Dashboard. **
 
 That’s it! You’re ready to go.
 
