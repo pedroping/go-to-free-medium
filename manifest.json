@@ -17,7 +17,6 @@
     "service_worker": "background.js"
   },
   "permissions": ["activeTab", "contextMenus", "notifications"],
-  "host_permissions": ["https://medium.com/*"],
   "externally_connectable": {
     "matches": ["https://medium.com/*"]
   }
