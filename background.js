@@ -17,25 +17,12 @@ function goToFreedum(url) {
   const baseURL = "https://freedium.cfd/";
   const newURL = baseURL + url;
 
-  fetch(newURL)
-    .then((response) => {
-      if (response.ok) return response.text();
-
-      showErrorMessage();
-      throw Error("Invalid article");
-    })
-    .catch((err) => console.log(err))
-    .then((resp) => {
-      if (!resp) return;
-
-      if (
-        resp.includes("Opps!") ||
-        resp.includes("Unable to identify the Medium article URL.")
-      )
-        return showErrorMessage();
-
-      chrome.tabs.create({ url: newURL });
-    });
+  try {
+    chrome.tabs.create({ url: newURL });
+  } catch (error) {
+    console.log(error);
+    showErrorMessage();
+  }
 }
 
 browser.runtime.onInstalled.addListener(() => {
