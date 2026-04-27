@@ -14,7 +14,7 @@ function showErrorMessage() {
 }
 
 function goToFreedum(url) {
-  const baseURL = "https://freedium.cfd/";
+  const baseURL = "https://freedium-mirror.cfd/";
   const newURL = baseURL + url;
 
   try {
